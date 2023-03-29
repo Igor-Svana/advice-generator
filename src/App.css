@@ -1,0 +1,134 @@
+:root {
+  --dice-size: 65px;
+  --dice-margin-top: -32.5px;
+  --card-width-desk: 550px;
+  --card-height-desk: 350px;
+  --card-width-mobile: 360px;
+  --card-height-mobile: 360px;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: hsl(218, 23%, 16%);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: var(--card-width-desk);
+  min-height: var(--card-height-desk);
+  background: hsl(217, 19%, 24%);
+  border-radius: 16px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 30%;
+}
+.header {
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 0.2em;
+  font-size: 14px;
+  margin: 0;
+  margin-top: 2em;
+}
+
+.advice-container {
+  display: flex;
+  min-height: 40%;
+  text-align: center;
+  padding: 0 2em;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  box-sizing: content-box;
+  
+}
+.advice-container::-webkit-scrollbar {
+  display: none;
+}
+
+p {
+  margin: 0;
+ 
+  color: hsl(193, 38%, 86%);
+  font-weight: 800;
+  font-size: 28px;
+  animation: animateText 1s linear;
+}
+
+@keyframes animateText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 100%;
+}
+
+.divider {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.dice-btn-container {
+  width: var(--dice-size);
+  height: var(--dice-size);
+  margin-bottom: var(--dice-margin-top);
+  margin-top: var(--dice-margin-top);
+  cursor: pointer;
+}
+
+.spinner {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.dice-container,
+.dice-container-over {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--dice-size);
+  height: var(--dice-size);
+  border-radius: 100%;
+  background: hsl(150, 100%, 66%);
+}
+
+.dice {
+  width: calc(var(--dice-size) * 0.4);
+  height: calc(var(--dice-size) * 0.4);
+}
+
+.dice-btn-container:hover .dice-container-over {
+  filter: blur(15px);
+  mix-blend-mode: lighten;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+  }
+  .card-container {
+    width: var(--card-width-mobile);
+    height: var(--card-height-mobile);
+  }
+}

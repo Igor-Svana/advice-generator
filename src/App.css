@@ -135,5 +135,6 @@ p {
   }
   .dice-btn-container:active .dice-container {
     background: hsl(150, 76%, 80%);
+    transform: scale(1.2);
   }
 }

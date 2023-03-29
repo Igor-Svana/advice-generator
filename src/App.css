@@ -116,6 +116,7 @@ p {
 .dice {
   width: calc(var(--dice-size) * 0.4);
   height: calc(var(--dice-size) * 0.4);
+  pointer-events: none;
 }
 
 .dice-btn-container:hover .dice-container-over {
@@ -135,7 +136,7 @@ p {
   }
   .dice-btn-container:active .dice-container {
     background: hsl(150, 76%, 80%);
-    transition: 0.2s transform ease-in;
+    transition: 0.1s transform ease-in;
     transform: scale(1.2);
   }
 }

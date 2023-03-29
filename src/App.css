@@ -130,4 +130,10 @@ p {
     width: var(--card-width-mobile);
     height: var(--card-height-mobile);
   }
+  .dice-btn-container:hover .dice-container-over {
+    filter: blur(0px);
+  }
+  .dice-btn-container:active .dice-container {
+    background: hsl(150, 76%, 80%);
+  }
 }
